@@ -1,0 +1,21 @@
+HOW TO BUILD
+------------
+make #Build
+sudo make install #Install to /usr
+make builddeb #Build a Debian package.
+make source #Build source archive.
+------------
+HOW TO USE
+------------
+There are three major components to this library:
+
+1) Events:
+-Events are a very simple concept. They represent the binding between
+a name (what is happening), and some data (what are the details of what is happening).
+In the Python build, the name is a string, and data is any object, in the C++
+build, both name and data are strings. An event is initialized using the constructor,
+which takes the name and data as arguments. In Python, these two fields can later
+be accessed as read-only properties, while in C++ they can be obtained using getName()
+and getData().
+
+UNDER CONSTRUCTION

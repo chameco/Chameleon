@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+wrapper.cpp
+Chameleon.egg-info/PKG-INFO
+Chameleon.egg-info/SOURCES.txt
+Chameleon.egg-info/dependency_links.txt
+Chameleon.egg-info/top_level.txt
+chameleon/event.h
