@@ -1,22 +1,21 @@
 #define PYTHON_BUILD
+#include "event.h"
 #include <boost/python.hpp>
-#include "cham.h"
 #include <string>
 using namespace boost::python;
-using namespace cham::event;
+using namespace chameleon;
 BOOST_PYTHON_MODULE(chameleon)
 {
-	class_<event>("event", init<std::string, boost::python::object>())
-		.add_property("name", &event::getName, &event::setName)
-		.add_property("data", &event::getData, &event::setData)
+	class_<Event>("Event", init<const std::string &, boost::python::object>())
+		.add_property("name", &Event::getName, &Event::setName)
+		.add_property("data", &Event::getData, &Event::setData)
 	;
-	class_<python_manager>("manager", init<>())
-		.def("alert", &python_manager::alert)
-		.def("reg", &python_manager::reg)
-		.def("unregister", &python_manager::unregister)
+	class_<Manager>("Manager", init<>())
+		.def("alert", &Manager::alert)
+		.def("reg", &Manager::reg)
 	;
-	class_<python_listener>("listener", init<>())
-		.def("_alert", &python_listener::alert)
-		.def("setResponse", &python_listener::setResponse)
+	class_<Listener>("Listener", init<>())
+		.def("notify", &Listener::notify)
+		.def("setResponse", &Listener::setResponse)
 	;
 }

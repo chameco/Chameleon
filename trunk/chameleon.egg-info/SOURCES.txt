@@ -1,0 +1,7 @@
+setup.py
+wrapper.cpp
+chameleon.egg-info/PKG-INFO
+chameleon.egg-info/SOURCES.txt
+chameleon.egg-info/dependency_links.txt
+chameleon.egg-info/top_level.txt
+src/event.cpp

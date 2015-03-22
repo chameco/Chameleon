@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: chameleon
+Version: 1.0
+Summary: C++ and Python library used to implement a listener-manager event system.
+Home-page: https://github.com/chameco/Chameleon
+Author: Samuel Breese
+Author-email: sbreese@xitol.net
+License: UNKNOWN
+Description: Chameleon is a library that takes the concept of event-based coding to a whole new level. Each
+        event that is raised can be handled by multiple listener classes, allowing for things such as
+        asynchronous network servers to be implemented with ease, and letting you add new listeners to
+        your existing codebase without touching your old code. This comes in handy when writing scalable
+        servers, games with plugins, etc. In addition, there is no main loop (you're responsible for
+        raising all of the events), so it can be integrated with existing systems like Twisted, GLUT,
+        GTK+, and Qt.
+Platform: UNKNOWN
